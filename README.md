@@ -65,3 +65,50 @@ rake plan
 rake up
 ```
 
+## (5) Replace the bootstrap configuration with the unprivileged user configuration
+
+In your `~/.aws/credentials`:
+
+```ini
+[spin_YOURNAME]
+aws_access_key_id = AKIA........
+aws_secret_access_key = xxxxxxxxxxx
+```
+
+Add an assume-role profile to your `~/.aws/config`:
+
+```ini
+[profile assume-IAM_ROLE-YOUR_STACK]
+role_arn = arn:aws:iam::YOUR_AWS_ACCOUNT_ID:role/spin_role-YOUR_STACK-ROLE
+source_profile = IAM_USER_PROFILE_FROM_YOUR_CREDENTIALS_FILE
+```
+
+For example:
+
+```ini
+[profile assume-spin_network-manager]
+role_arn = arn:aws:iam::000000000000:role/spin_role-spin_network-manager
+source_profile = spin_YOURNAME
+```
+
+Then in your stack configuration:
+
+File: `./stack-instance-local.yaml`
+```yaml
+resources:
+  aws_profile: spin_YOURNAME
+  assume_role_profile: assume-YOUR_STACK_HERE-manager
+  assume_role_arn: arn:aws:iam::000000000000:role/spin_role-spin_network-manager
+parameters:
+  managed_stack_name: YOUR_STACK
+  stack_manager_users:
+    - spin_YOURNAME
+```
+
+## (6) Test it
+
+(Note: this currently requires doing the previous configuration step for role *spin_role-spin_network-manager* account, as it requires some extra permissions to run these tests)
+
+```bash
+rake test
+```

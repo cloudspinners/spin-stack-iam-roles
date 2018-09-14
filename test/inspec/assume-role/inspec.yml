@@ -1,0 +1,9 @@
+name: iam-roles
+title: Cloudspin Assume Role
+maintainer: Kief Morris
+copyright: 2018 Kief Morris
+copyright_email: kief@cloudspin.io
+license: MIT
+summary: Test that the roles can be asssumed
+version: 0.1.0
+description: Test that the roles can be asssumed

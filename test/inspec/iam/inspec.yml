@@ -1,0 +1,9 @@
+name: iam-roles
+title: Cloudspin IAM Roles
+maintainer: Kief Morris
+copyright: 2018 Kief Morris
+copyright_email: kief@cloudspin.io
+license: MIT
+summary: Test that the roles are correctly created
+version: 0.1.0
+description: Test that the roles are correctly created

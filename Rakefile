@@ -15,3 +15,4 @@ InspecTask.new(stack_instance: stack)
 ArtefactTask.new(definition_folder: './src',
                  dist_folder: './dist')
 
+task :test => [ :inspec ]
