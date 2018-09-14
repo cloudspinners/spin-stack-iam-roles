@@ -7,3 +7,5 @@ provider "aws" {
     session_name = "session-${var.instance_identifier}"
   }
 }
+
+data "aws_caller_identity" "current_aws_account" {}

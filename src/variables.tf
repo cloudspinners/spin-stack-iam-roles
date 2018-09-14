@@ -1,3 +1,7 @@
+variable "managed_stack_name" {
+  description = "The name of the stack definition these roles are used to manage."
+}
+
 variable "instance_identifier" {
   description = "A unique identifier for this instance of the stack."
 }
@@ -19,4 +23,10 @@ variable "aws_profile" {
 variable "assume_role_arn" {
   description = "The IAM role to assume."
   default     = ""
+}
+
+variable "stack_manager_users" {
+  description = "Users who should be able to assume the role."
+  type = "list"
+  default = []
 }

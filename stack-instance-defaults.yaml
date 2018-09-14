@@ -1,5 +1,5 @@
 instance:
-  group: local
+  group: account
 parameters:
   region: "eu-west-1"
-  environment_name: local
+  environment_name: account
