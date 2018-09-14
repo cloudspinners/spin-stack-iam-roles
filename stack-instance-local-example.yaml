@@ -1,0 +1,7 @@
+---
+instance:
+  group: NOT_SET
+resources:
+  aws_profile: NOT_SET
+  assume_role_profile: NOT_SET
+  assume_role_arn: NOT_SET

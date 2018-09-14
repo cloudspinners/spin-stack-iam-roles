@@ -1,0 +1,9 @@
+name: YOUR_STACK
+title: YOUR STACK PROFILE TITLE
+maintainer: YOUR_NAME
+copyright: YOUR_NAME
+copyright_email: YOUR_EMAIL
+license: MIT
+summary: YOUR STACK SUMMARY
+version: 0.1.0
+description: YOUR INSPEC PROFILE DESCRIPTION

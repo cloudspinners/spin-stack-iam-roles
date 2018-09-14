@@ -1,0 +1,5 @@
+instance:
+  group: local
+parameters:
+  region: "eu-west-1"
+  environment_name: local
