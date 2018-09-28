@@ -16,3 +16,4 @@ ArtefactTask.new(definition_folder: './src',
                  dist_folder: './dist')
 
 task :test => [ :inspec ]
+task :default => [ :plan ]

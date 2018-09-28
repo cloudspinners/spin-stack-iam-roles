@@ -1,5 +1,6 @@
 instance:
-  group: account
+  group: test_stack_iam
 parameters:
+  managed_stack_name: spin_stack_iam
   region: "eu-west-1"
-  environment_name: account
+  environment_name: test_stack_iam
