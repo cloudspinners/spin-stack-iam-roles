@@ -47,7 +47,9 @@ resource "aws_iam_policy" "rights_for_delivery_resources" {
         "ssm:PutParameter",
         "ssm:DeleteParameter",
         "ssm:DeleteParameters",
-        "ssm:AddTagsToResource"
+        "ssm:AddTagsToResource",
+        "ssm:ListTagsForResource",
+        "ssm:RemoveTagsFromResource"
       ],
       "Effect": "Allow",
       "Resource": "*"
