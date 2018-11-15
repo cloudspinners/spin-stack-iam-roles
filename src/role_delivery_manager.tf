@@ -39,13 +39,15 @@ resource "aws_iam_policy" "rights_for_delivery_resources" {
         "codepipeline:*",
         "codebuild:*",
         "s3:*",
+        "ssm:DescribeParameters",
+        "ssm:GetParameter",
+        "ssm:GetParameters",
+        "ssm:GetParametersByPath",
+        "ssm:GetParameterHistory",
         "ssm:PutParameter",
         "ssm:DeleteParameter",
-        "ssm:GetParameterHistory",
-        "ssm:GetParametersByPath",
-        "ssm:GetParameters",
-        "ssm:GetParameter",
-        "ssm:DeleteParameters"
+        "ssm:DeleteParameters",
+        "ssm:AddTagsToResource"
       ],
       "Effect": "Allow",
       "Resource": "*"
